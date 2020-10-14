@@ -9,15 +9,15 @@ public class NumberCounter {
 
         int counternegativ = 0;
         int counterpositiv = 0;
-        int sum = 0;
+        float sum = 0;
         int number = input.nextInt();
         float average = sum/(counterpositiv + counternegativ);
         while (number != 0) {
 
           if (number > 0) 
-          { counterpositiv++;}     
+          {counterpositiv++;}     
           else 
-          { counternegativ++;} 
+          {counternegativ++;} 
           sum = sum + number;
           number = input.nextInt();
         }
@@ -29,7 +29,7 @@ public class NumberCounter {
         System.out.println("Negative numbers: " + counternegativ);
         System.out.println("Positive numbers: " + counterpositiv);
         System.out.println("Sum: " + sum );
-        System.out.println("Average: " + avarage);
+        System.out.println("Average: " + average);
     }
 
 }
