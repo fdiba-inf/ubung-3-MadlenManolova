@@ -2,10 +2,10 @@ package exercise3;
 
 import java.util.Scanner;
 
-public class NumberCounter {
+public class NumberCounter{
 
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+ public static void main (String[] args){
+  Scanner input = new Scanner(System.in);
 
         int counternegativ = 0;
         int counterpositiv = 0;
@@ -13,12 +13,12 @@ public class NumberCounter {
         int number = input.nextInt();
         float average = sum/(counterpositiv + counternegativ);
         while (number != 0) {
-
+          
           if (number > 0) 
           {counterpositiv++;}     
           else 
           {counternegativ++;} 
-          sum = sum + number;
+          sum = sum + number; 
           number = input.nextInt();
         }
 
@@ -30,6 +30,8 @@ public class NumberCounter {
         System.out.println("Positive numbers: " + counterpositiv);
         System.out.println("Sum: " + sum );
         System.out.println("Average: " + average);
-    }
+    
 
+
+ }
 }
