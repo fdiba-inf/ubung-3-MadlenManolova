@@ -13,26 +13,32 @@ public static void main(String[] args) {
         float c = input.nextFloat();
 
         do{
+
+          
+          if (a > 0 && a < (b + c) && b < (a + c) && c < (a + b)) {
+            if (a == b || b == c) {
+              System.out.println("Triangle: " + "equilateral");
+          } else if ( a == b || a == c || b == c) {
+              System.out.println("Triangle: " + "isosceles");
+          } else if (a != b && a != c && b != c ){
+             System.out.println("Triangle: " + "scalene");
+          }
+
           float s = (a+b+c)/2;
-          float area = Math.sqrt(s*(s-a)*(s-b)*(s-c));
+          double area = Math.sqrt(s*(s-a)*(s-b)*(s-c));
 
           System.out.println("Area: " + area);
 
-          if (a=b && b=c){
-            System.out.println("Triangle: " + "equilateral");
-          } else if(a=b || a=c || b=c ){
-            System.out.println("Triangle: " + "isosceles");
-          } else if (a!=b && a!=c && b!=c ){
-            System.out.println("Triangle: " + "scalene");
-          } else
+          
+          } else {
           System.out.println("Values are not correct!");
-
-          a= input.nextDouble();
-          b= input.nextDouble();
-          c = input.nextDouble();
+          }
+          a= input.nextFloat ();
+          b= input.nextFloat ();
+          c = input.nextFloat ();
         }
 
-        while (a>0 && b>0 && c>0 && (a+b)>c && (a+c)>b && (b+c)>a);
+        while (a>0 && b>0 && c>0 );
 }
 
 }
